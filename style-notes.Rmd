@@ -1,0 +1,42 @@
+---
+title: "My notes on R style"
+author: "Rhian Davies"
+date: "18 April 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Syntax 
+
+* Lower caps
+* `_` not `.`
+* If you override the default value of an argument, use the full name `mean(1:10, na.rm = TRUE)`
+* Indent code inside `{}` with two spaces. 
+* Space after a comma, never before
+* Place a space before `(`, except when it’s part of a function call.
+* 80 characters per line
+* Use `<-` not `=` for assignment.
+* Use `"` not `'` for quoting text. 
+
+## Functions
+
+* Use verbs for function names `calc_means()`
+* Indent multi-line functions by start of decription
+* Only use `return()` for early returns.
+* A function should do one thing well.
+* A function should be called either because it has side-effects or because it returns a value; not both. 
+* Strive for 20-30 lines per function are common. 
+* A function should be easily understandable in isolation.
+* If you *have* to use global options, clean up with `on.exit()`.
+
+
+## Pipes
+
+* 3 nested functions? Use `%>%`
+* After first pipe, indent each line by two spaces.
+* Always show the brackets. ` %>% unique()`
+* Seperate line for assignment
